@@ -1,6 +1,7 @@
 body {
     background-color: rgb(0, 0, 0);
       width: 300px;
+      height: 500px;
 
 }
 
@@ -56,6 +57,8 @@ nav {
     width: 20px;
     height: 20px;
     border: 0.2px solid white;
+        cursor: pointer;
+
 }
 
 
@@ -84,4 +87,47 @@ nav {
     background-color: #232b88;
     border: 0.2px solid white;
    
+}
+
+.auth-panel {
+    width: 20px;
+    height: 30px;
+    background-color: antiquewhite;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile-panel {
+    position: absolute;
+    top: 33px;
+    right: 0;
+    width: 100px;
+    padding: 8px;
+    background:black;
+    border: 0.5px solid white;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+#logoutB {
+    color: white;
+    background-color:black;
+    border: none;
+    cursor: pointer;
+}
+
+#logoutB:hover {
+    color: red
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main h1 {
+    color: rgb(255, 196, 0);
 }
