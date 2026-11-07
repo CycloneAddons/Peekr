@@ -37,10 +37,27 @@ app.get("/auth/callback", async (req, res) => {
 
         const data = await cres.json();
 
-        res.status(cres.status).json({
-            isSuccess: cres.ok,
-            data
-        })
+        res.send(`
+        <!DOCTYPE html>
+        <html>
+        <body>
+            <h3>Login Success!</h3>
+            <p>You can close this window.</p>
+
+            <script>
+                window.opener.postMessage(
+                    {
+                        type: "peekr_discord_success",
+                        data: ${JSON.stringify(data)}
+                    },
+                    "*"
+                );
+
+                window.close();
+            </script>
+        </body>
+        </html>
+    `);
 
     } catch (error) {
         console.error("callback err:", error);

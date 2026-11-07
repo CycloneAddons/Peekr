@@ -55,4 +55,33 @@ nav {
     border-radius: 50%;
     width: 20px;
     height: 20px;
+    border: 0.2px solid white;
+}
+
+
+.auth {
+    display: flex;
+    align-items: center;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+
+#loginB {
+    background: #5865F2;
+    width: 50px;
+    height: 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+#loginB:hover {
+    background-color: #232b88;
+    border: 0.2px solid white;
+   
 }
