@@ -3,7 +3,26 @@
     "description": "Peekr is a browser extension that help you show what you are currently browseing on the seleceted sites you want to share as your discord activity. For example you can show user what you are watching on youtube, what you are listening on youtube music, etc...",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": ["storage"],
+    "permissions": [
+        "storage",
+        "identity"
+    ],
+    "host_permissions": [
+        "http://localhost:3000/*"
+    ],
+    "background": {
+        "service_worker": "bg.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
     "action": {
         "default_popup": "public/index.html",
         "default_icon": "public/logo.png"
